@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Customer Activation">
+        <div class="slds-p-around_medium">
+    <c-lwc-child obj-name="Account" search-placeholder="Search Accounts" icon-name="standard:account" onlookupselected={handleAccountSelection}></c-lwc-child>
+</div>
+    <div class="slds-p-around_medium"> 
+         <lightning-textarea
+        max-length=”100″
+        message-when-value-missing=”Please enter the comments
+        label= Comments
+        value={description}
+        onchange={handleChange}
+        class=”textAreaCSS”>
+    </lightning-textarea>
+</div>
+<!--<div>
+    <lightning-checkbox-group name="Checkbox Group"
+                              label="Checkbox Group"
+                              options={options}
+                              value={value}
+                              onchange={handleChange}></lightning-checkbox-group>
+</div>>-->
+<div class="slds-align_absolute-center">
+    <lightning-button variant="brand" label="Activate" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+</div>
+    </lightning-card>
+</template>
